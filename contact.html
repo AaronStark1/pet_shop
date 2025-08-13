@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Pet Pals</title>
+    <link rel="stylesheet" href="./index.css">
+        <!-- Favicon  -->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3460/3460335.png">
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="">
+                <h1>Pet Shop</h1>
+            </div>
+            <div class="navbar-links">
+                <button><a href="./pets.html">Pets</a></button>
+                <button><a href="./about.html">About</a></button>
+                <button><a href="./services.html">Services</a></button>
+                <button><a href="./testimonials.html">Testimonials</a></button>
+                <button><a href="./contact.html">Contact</a></button>
+            </div>
+        </nav>
+    </header>
+    <section class="contact-banner">
+        <h1> ☎ Contact Us</h1>
+        <p>We’re here to help you and your furry friends</p>
+    </section>
+
+    <main class="contact-page">
+        <section class="contact-form-section">
+            <div class="card">
+                <h2>Send Us a Message</h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="pet-type">Pet Type</label>
+                            <input type="text" id="pet-type" name="pet-type" placeholder="Dog, Cat, Bird, etc.">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="inquiry-type">Inquiry Type</label>
+                            <select id="inquiry-type" name="inquiry-type" required>
+                                <option value="">Select...</option>
+                                <option value="adoption">Pet Shopping</option>
+                                <option value="grooming">Grooming</option>
+                                <option value="training">Training</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <input type="submit" value="Send Message">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact-info">
+            <h2>Visit Us</h2>
+            <p><strong>Address:</strong> 123 Pet Street, Pawsville, India</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Email:</strong> contact@petshop.com</p>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.123456789!2d80.1234567!3d12.9876543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xabcdef1234567890!2sPet%20Pals!5e0!3m2!1sen!2sin!4v1234567890123"
+                    width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

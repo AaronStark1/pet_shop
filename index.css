@@ -1,0 +1,656 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    background-color: #f9f6dd;
+    color: #2d4d8a;
+    padding-top: 50px;
+}
+
+header h1 {
+    font-weight: 800;
+    font-size: 3em;
+    padding-top: 1%;
+}
+header img{
+    width: 10%;
+}
+.navbar-brand{
+    display: flex;
+    gap: 10px;
+    font-size: larger;
+}
+#banner {
+    width: 100%;
+    height: 500px;
+    background-image: url("./images/petbanner.jpg");
+    background-attachment: local;
+    background-size: cover;
+    background-position: 0ch -11ch;
+}
+
+h4 {
+    text-align: center;
+    padding-top: 1ch;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+#nav .row {
+    width: 80%;
+    height: 250px;
+    background-color: #fbcb5b;
+    border-radius: 20px;
+    margin: 30px 150px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.col {
+    margin: 0 20px;
+}
+
+/* From Uiverse.io by alexroumi */
+button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #5e76c5;
+    z-index: 1;
+    background: #ce865e;
+    position: relative;
+    font-weight: 1000;
+    font-size: 30px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #ff624f;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+button:hover {
+    color: #e8e8e8;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#featured .row {
+    width: 80%;
+    height: 350px;
+    background-color: #d4b393;
+    border-radius: 20px;
+    margin: 30px 150px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#featured .col {
+    width: 20%;
+    height: 90%;
+    background-color: #ffe390;
+    margin: 20px;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.col img {
+    width: 90%;
+    height: 200px;
+    border-radius: 30px;
+    margin-top: 12px;
+}
+
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: #ffe390;
+    color: #2d4d8a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-brand h1 {
+    font-weight: 800;
+    font-size: 2.2em;
+    margin: 0;
+    color: #2d4d8a;
+    letter-spacing: 1px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 18px;
+}
+
+.navbar-links button {
+    /* Use your existing button styles, but override color for navbar */
+    padding: 12px 22px;
+    border: unset;
+    border-radius: 15px;
+    color: #5e76c5;
+    background: #ce865e;
+    font-weight: 1000;
+    font-size: 1.1em;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.17);
+    position: relative;
+    transition: all 250ms;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.navbar-links button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #ff624f;
+    z-index: -1;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.17);
+    transition: all 250ms;
+}
+
+.navbar-links button:hover {
+    color: #e8e8e8;
+}
+
+.navbar-links button:hover::before {
+    width: 100%;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+/* --- PETS PAGE STYLES --- */
+
+/* Section containing all pets */
+.pets-section {
+    padding: 40px 0 60px 0;
+    margin-left: 5%;
+    min-height: 100vh;
+}
+
+/* Title for the pets page */
+.pets-title {
+    color: #ce865e;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* Each category (Dogs, Cats, etc.) */
+.pets-category {
+    margin-bottom: 40px;
+}
+
+.pets-category h2 {
+    color: #2d4d8a;
+    font-size: 2em;
+    margin-bottom: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Grid for pet cards */
+.pets-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: flex-start;
+}
+
+/* Individual pet card */
+.pet-card {
+    background: #fff8ee;
+    border-radius: 22px;
+    box-shadow: 0 4px 18px -4px #ce865e44;
+    width: 290px;
+    padding: 22px 18px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.pet-card:hover {
+    box-shadow: 15px 15px 32px -6px #ce865e88;
+
+    transform: scale(1.07);
+}
+
+.pet-card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 16px;
+    border: 3px solid #ce865e33;
+    background: #fff;
+}
+
+.pet-card h3 {
+    font-size: 1.3em;
+    color: #2d4d8a;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+
+.pet-card .pet-price {
+    color: #ce865e;
+    font-weight: 900;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.pet-card .pet-desc {
+    color: #5e76c5;
+    font-size: 1em;
+    margin-bottom: 16px;
+    text-align: center;
+    min-height: 48px;
+}
+
+/* "View Details" link styled as a button */
+.pet-card .details-link {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 12px;
+    background: #ce865e;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s;
+    font-size: 1em;
+    box-shadow: 2px 4px 12px -3px #ce865e44;
+}
+
+.pet-card .details-link:hover {
+    background: #ff624f;
+    color: #fff;
+}
+
+.services-section {
+    padding: 50px 0 50px 0;
+}
+
+.services-title {
+    color: #ce865e;
+    text-align: center;
+    margin-bottom: 48px;
+    font-size: 2.5em;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    background: #d4b393;
+    border-radius: 30px;
+    box-shadow: 0 4px 18px -4px #ce865e44;
+    padding: 32px 40px;
+    gap: 40px;
+}
+
+
+.service-img {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-img img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 3px solid #ce865e33;
+    background: #fff;
+    box-shadow: 0 2px 8px #ce865e22;
+}
+
+.service-desc-block {
+    flex: 2 1 400px;
+    padding: 0 20px;
+}
+
+.service-desc-block h3 {
+    color: #2d4d8a;
+    font-size: 2.5em;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.service-desc-block p {
+    color: #5e76c5;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* About html  */
+/* Banner Section */
+.about-banner {
+    background-image: url("./images/freepik__upload__98625.png");
+    background-size: 90% 100%; /* Show entire image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-position: center; /* Keep centered */
+    color: #ff624f;
+    text-align: center;
+    padding: 5rem 1rem; /* Increased padding for height */
+    min-height: 250px;  /* Ensures minimum height */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+.about-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3); /* Light wash over image */
+    z-index: -1;
+}
+
+.about-banner h1 {
+    margin-top: 90px;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+.about-banner p {
+    font-size: 2rem;
+    opacity: 0.9;
+    
+}
+
+/* About Info Section */
+.about-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem 5%;
+}
+.about-info h2 {
+    color: #ce865e;
+    margin-bottom: 0.5rem;
+}
+.about-info p {
+    color: #5a4632;
+    line-height: 1.6;
+}
+
+/* Gallery Section */
+.about-gallery {
+    padding: 3rem 5%;
+    text-align: center;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Certifications Section */
+.about-certifications {
+    background-color: rgb(56,76,136);
+    padding: 3rem 5%;
+    color: #fbcb5b;
+}
+.about-certifications h2 {
+    text-align: center;
+    color: #ce865e;
+    margin-bottom: 1rem;
+}
+.about-certifications ul {
+    list-style: none;
+    max-width: 600px;
+    margin: auto;
+    padding: 0;
+}
+.about-certifications li {
+    background: #b27956;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 19px 12px 16px rgba(0,0,0,0.1);
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Testimonials Page */
+.testimonials-header {
+
+    text-align: center;
+    padding: 3rem 1rem;
+    border-radius: 10px;
+    margin: 1rem auto;
+
+}
+
+.testimonials-header h1 {
+    font-size: 3rem;
+    color: #4a2c1a;
+    margin-bottom: 0.5rem;
+}
+
+.testimonials-header p {
+    color: #5c3a24;
+    font-size: 1rem;
+}
+
+.testimonials-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.testimonial-card {
+    background-color: #dccebe;
+    border: 2px solid #e0b96b;
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 5px 5px 15px -3px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 25px -3px rgba(0,0,0,0.25);
+}
+
+.testimonial-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card h3 {
+    color: #4a2c1a;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-card p {
+    color: #5c3a24;
+    font-style: italic;
+}
+
+/* Contact Page Banner */
+.contact-banner {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 30px;
+    color: #4a2c1a;
+    font-size: 1.5rem;
+}
+
+/* Contact Page Layout */
+.contact-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    padding: 2rem;
+}
+
+.contact-form-section, .contact-info {
+    flex: 1 1 300px;
+}
+
+/* Form Styles */
+/* Contact Form Card Style */
+.card {
+    width: 100%;
+    padding: 30px 40px;
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    background-color: #5e76c5; /* Pet Pals accent color */
+}
+
+.card h2 {
+    color: #ffdb7b;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.card .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    grid-gap: 20px;
+}
+
+.card .col {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.card .form-group {
+    position: relative;
+    width: 100%;
+    color: #ffdb7b;
+}
+
+.card .form-group input,
+.card .form-group select,
+.card .form-group textarea {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: 4px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.2);
+    color: #ffdb7b;
+    border-radius: 20px;
+}
+
+.card .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.card .form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card input[type="submit"] {
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    cursor: pointer;
+    background: #b27956;
+    color: #ffdb7b;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.card input[type="submit"]:hover {
+    border-color: #fff;
+    background-color: #ff624f;
+    color: white;
+}
+
+
+/* Map */
+.map-container {
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
