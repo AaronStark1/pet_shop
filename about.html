@@ -5,84 +5,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Pet Pals</title>
-    <link rel="stylesheet" href="./index.css">
-    <!-- Favicon  -->
+    <meta name="description" content="The Pet Pals story: a family-run shop founded in 2010, built on ethical breeding and vet-approved care.">
+    <!-- Favicon -->
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3460/3460335.png">
-    <!-- Google Fonts  -->
+    <!-- Display Font: Bamboly Demo (Self-hosted for instant 0ms latency) -->
+    <link rel="preload" href="./fonts/bamboly-demo.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Primary Body & Subheadings: Inter, Poppins, Fredoka -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./index.css">
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-brand">
-                <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="">
-                <a href="./index.html"><h1>Pet Pals</h1></a>
-            </div>
-            <div class="navbar-links">
-                <button><a href="./pets.html">Pets</a></button>
-                <button><a href="./about.html">About</a></button>
-                <button><a href="./services.html">Services</a></button>
-                <button><a href="./testimonials.html">Testimonials</a></button>
-                <button><a href="./contact.html">Contact</a></button>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary">
+            <a class="navbar-brand" href="./index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="" width="38" height="38">
+                <span>Pet Pals</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+                <span class="nav-toggle-bars" aria-hidden="true"></span>
+            </button>
+            <div class="navbar-links" id="nav-drawer">
+                <a class="nav-link" href="./pets.html">Pets</a>
+                <a class="nav-link" href="./about.html" aria-current="page">About</a>
+                <a class="nav-link" href="./services.html">Services</a>
+                <a class="nav-link" href="./testimonials.html">Testimonials</a>
+                <a class="btn btn--sm nav-cta" href="./contact.html">Contact</a>
             </div>
         </nav>
     </header>
+    <div class="nav-scrim" aria-hidden="true"></div>
 
-    <!-- About Info Section -->
-    <section class="about-banner">
-        <h1>About Petshop</h1>
-        <p>Where Love Meets Care for Every Pet</p>
-    </section>
-    <section class="about-info">
-        <div class="about-text">
-            <h2>Our Story</h2>
-            <p>
-                Founded in 2010, Pet Pals has been a trusted place for pet lovers
-                across the city. What started as a small family-run shop is now a vibrant
-                community hub for pet owners. We pride ourselves on offering unique ethically bred pets, expert advice,
-                and the warmest welcome for both pets and their humans.
-            </p>
+    <main id="main">
+        <!-- About Banner -->
+        <section class="page-hero about-banner">
+            <div class="container">
+                <span class="eyebrow">Brand heritage &amp; standards</span>
+                <h1 class="page-title">About Pet Pals</h1>
+                <p class="lead">Where Love Meets Care for Every Pet</p>
+            </div>
+        </section>
+
+        <!-- About Info: Bento Grid -->
+        <section class="section about-info">
+            <div class="container">
+                <div class="bento">
+                    <article class="bento-tile bento-story tactile about-text" data-reveal>
+                        <span class="bento-year" aria-hidden="true">2010</span>
+                        <span class="chip">Our founding narrative</span>
+                        <h2>Our Story</h2>
+                        <p>
+                            Founded in 2010, Pet Pals has been a trusted place for pet lovers
+                            across the city. What started as a small family-run shop is now a vibrant
+                            community hub for pet owners. We pride ourselves on offering unique ethically bred pets, expert advice,
+                            and the warmest welcome for both pets and their humans.
+                        </p>
+                    </article>
+
+                    <article class="bento-tile bento-ethical tactile" data-reveal style="--reveal-delay: 80ms;">
+                        <span class="bento-icon" aria-hidden="true">🐾</span>
+                        <h2>Ethical Breeding Standard</h2>
+                        <p>Every companion we offer is ethically bred. No shortcuts, no exceptions: it is the standard our family shop was built on, and the one we still hold ourselves to.</p>
+                    </article>
+
+                    <article class="bento-tile bento-vet tactile" data-reveal style="--reveal-delay: 160ms;">
+                        <span class="bento-icon" aria-hidden="true">🩺</span>
+                        <h2>Vet Certified Care</h2>
+                        <p>Our in-house grooming salon and vet-approved care section make us a one-stop haven for your furry friends.</p>
+                    </article>
+
+                    <article class="bento-tile bento-unique tactile about-text" data-reveal>
+                        <span class="bento-icon" aria-hidden="true">🌱</span>
+                        <h2>What Makes Us Unique</h2>
+                        <p>From handpicked organic treats to eco-friendly toys, we ensure every product meets our high standards for safety and joy.</p>
+                    </article>
+
+                    <figure class="bento-tile bento-photo tactile" data-reveal style="--reveal-delay: 80ms;">
+                        <img src="./images/freepik__upload__98625.png" alt="Illustration of a dog, a cat and a hamster beside a kennel with the words “They need your love”" width="2000" height="809" loading="lazy" decoding="async">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet Our Pet Team -->
+        <section class="section about-team">
+            <div class="container">
+                <div class="section-head section-head--center" data-reveal>
+                    <span class="eyebrow">The furry board of directors</span>
+                    <h2 class="section-title">Meet Our Pet Team</h2>
+                    <p class="lead">The four-legged executives who test every toy, inspect every treat, and run the shop.</p>
+                </div>
+                <div class="team-grid">
+                    <article class="team-card tactile" data-reveal>
+                        <div class="team-media">
+                            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=600&h=600&q=80"
+                                alt="Barnaby the Golden Retriever" width="300" height="300" loading="lazy" decoding="async">
+                            <span class="chip chip--gold team-badge">Chief Treat Officer 🐾</span>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Barnaby</h3>
+                            <span class="team-role">Head of Tail Wags</span>
+                            <p class="team-desc">Golden Retriever with 7 years of hands-on chew toy testing and certified customer cuddle therapy.</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card tactile" data-reveal style="--reveal-delay: 80ms;">
+                        <div class="team-media">
+                            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&h=600&q=80"
+                                alt="Cleo the Persian Cat" width="300" height="300" loading="lazy" decoding="async">
+                            <span class="chip chip--sky team-badge">Head of Nap Ops 💤</span>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Cleo</h3>
+                            <span class="team-role">Quality &amp; Sunbeam Inspector</span>
+                            <p class="team-desc">Personally tests and certifies all plush bedding, cat trees, and prime afternoon windowsill sunbeams.</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card tactile" data-reveal style="--reveal-delay: 160ms;">
+                        <div class="team-media">
+                            <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=600&h=600&q=80"
+                                alt="Pip the Beagle" width="300" height="300" loading="lazy" decoding="async">
+                            <span class="chip chip--coral team-badge">Lead Greeter 🎾</span>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Pip</h3>
+                            <span class="team-role">Front Door Security</span>
+                            <p class="team-desc">First to welcome every visitor at the front desk with enthusiastic sniffs and expert ball retrieval.</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card tactile" data-reveal style="--reveal-delay: 240ms;">
+                        <div class="team-media">
+                            <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=600&h=600&q=80"
+                                alt="Milo the Lop-eared Bunny" width="300" height="300" loading="lazy" decoding="async">
+                            <span class="chip chip--gold team-badge">Spa &amp; Hay Critic 🥕</span>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Milo</h3>
+                            <span class="team-role">Grooming Consultant</span>
+                            <p class="team-desc">Reviews grooming salon acoustics and enforces highest standards for organic Timothy hay sweetness.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Special Care -->
+        <section class="section about-certifications">
+            <div class="container">
+                <div class="section-head section-head--center" data-reveal>
+                    <span class="eyebrow">Certifications &amp; special care</span>
+                    <h2 class="section-title">Our Commitment</h2>
+                    <p class="lead">Four promises we make to every pet and every pet parent who walks through our door.</p>
+                </div>
+                <ul class="cert-grid">
+                    <li class="cert-badge" data-reveal>
+                        <span class="cert-icon" aria-hidden="true">🥗</span>
+                        Certified Pet Nutrition Specialists
+                    </li>
+                    <li class="cert-badge" data-reveal style="--reveal-delay: 80ms;">
+                        <span class="cert-icon" aria-hidden="true">🩺</span>
+                        Vet-Approved Grooming &amp; Spa Services
+                    </li>
+                    <li class="cert-badge" data-reveal style="--reveal-delay: 160ms;">
+                        <span class="cert-icon" aria-hidden="true">🌱</span>
+                        Eco-Friendly &amp; Cruelty-Free Products
+                    </li>
+                    <li class="cert-badge" data-reveal style="--reveal-delay: 240ms;">
+                        <span class="cert-icon" aria-hidden="true">❤️</span>
+                        Local Shelter Support Program
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="cta-band tactile" data-reveal>
+                    <div>
+                        <h2>Come say hello.</h2>
+                        <p>Meet our furry team, discover our pets, and see what the warmest welcome in town feels like.</p>
+                    </div>
+                    <div class="btn-row">
+                        <a class="btn" href="./contact.html">Plan your visit <span class="arrow" aria-hidden="true">→</span></a>
+                        <a class="btn btn--white" href="./pets.html">Meet the pets</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a class="footer-brand" href="./index.html">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="" width="40" height="40" loading="lazy">
+                        <span>Pet Pals</span>
+                    </a>
+                    <p>Where love meets care for every pet. A trusted place for pet lovers since 2010.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="./pets.html">Pets</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="./testimonials.html">Testimonials</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Visit us</h3>
+                    <address>
+                        123 Pet Street, Pawsville, India<br>
+                        <a href="tel:+919876543210">+91 98765 43210</a><br>
+                        <a href="mailto:contact@petshop.com">contact@petshop.com</a>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© Pet Pals. Made with love for every paw.</span>
+                <span>Display font made from <a href="http://www.onlinewebfonts.com/fonts" target="_blank" rel="noopener">Web Fonts</a>, licensed by CC BY 4.0</span>
+            </div>
         </div>
+    </footer>
 
-        <div class="about-text">
-            <h2>What Makes Us Unique</h2>
-            <p>
-                From handpicked organic treats to eco-friendly toys, we ensure every product meets
-                our high standards for safety and joy. Our in-house grooming salon and
-                vet-approved care section make us a one-stop haven for your furry friends.
-            </p>
-        </div>
-    </section>
-
-    <!-- Staff & Shop Images -->
-    <section class="about-gallery">
-        <h2>Meet Our Team</h2>
-        <div class="gallery-grid">
-            <img src="https://i0.wp.com/morrisanimalrefuge.org/wp-content/uploads/2025/06/19.png?fit=300%2C300&ssl=1"
-                alt="https://morrisanimalrefuge.org/about-us/">
-            <img src="https://i0.wp.com/morrisanimalrefuge.org/wp-content/uploads/2025/06/6.png?fit=300%2C300&ssl=1"
-                alt="Staff Member with Pet">
-            <img src="https://i0.wp.com/morrisanimalrefuge.org/wp-content/uploads/2025/06/9-2.png?fit=300%2C300&ssl=1"
-                alt="Grooming Session">
-            <img src="https://i0.wp.com/morrisanimalrefuge.org/wp-content/uploads/2025/06/11-2.png?fit=300%2C300&ssl=1"
-                alt="Shop Interior">
-        </div>
-    </section>
-
-    <!-- Certifications & Special Care -->
-    <section class="about-certifications">
-        <h2>Our Commitment</h2>
-        <ul>
-            <li>Certified Pet Nutrition Specialists 🥗</li>
-            <li>Vet-Approved Grooming & Spa Services 🩺</li>
-            <li>Eco-Friendly & Cruelty-Free Products 🌱</li>
-            <li>Local Shelter Support Program ❤️</li>
-        </ul>
-    </section>
+    <script src="./main.js" defer></script>
 </body>
 
 </html>

@@ -1,56 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonials | Pet Pals</title>
-    <link rel="stylesheet" href="index.css">
-        <!-- Favicon  -->
+    <meta name="description" content="Hear from the pet parents who trust Pet Pals with their companions.">
+    <!-- Favicon -->
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3460/3460335.png">
-    <!-- Google Fonts  -->
+    <!-- Display Font: Bamboly Demo (Self-hosted for instant 0ms latency) -->
+    <link rel="preload" href="./fonts/bamboly-demo.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Primary Body & Subheadings: Inter, Poppins, Fredoka -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./index.css">
+    <script>document.documentElement.classList.add("js");</script>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-brand">
-                <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="">
-                <a href="./index.html"><h1>Pet Pals</h1></a>
-            </div>
-            <div class="navbar-links">
-                <button><a href="./pets.html">Pets</a></button>
-                <button><a href="./about.html">About</a></button>
-                <button><a href="./services.html">Services</a></button>
-                <button><a href="./testimonials.html">Testimonials</a></button>
-                <button><a href="./contact.html">Contact</a></button>
+    <!-- Shared 5-point star, referenced by every rating cluster -->
+    <svg width="0" height="0" style="position: absolute;" aria-hidden="true" focusable="false">
+        <symbol id="star" viewBox="0 0 24 24">
+            <path d="M12 2.6l2.87 5.98 6.53.9-4.76 4.56 1.17 6.5L12 17.4l-5.81 3.14 1.17-6.5L2.6 9.48l6.53-.9z" />
+        </symbol>
+    </svg>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary">
+            <a class="navbar-brand" href="./index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="" width="38" height="38">
+                <span>Pet Pals</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+                <span class="nav-toggle-bars" aria-hidden="true"></span>
+            </button>
+            <div class="navbar-links" id="nav-drawer">
+                <a class="nav-link" href="./pets.html">Pets</a>
+                <a class="nav-link" href="./about.html">About</a>
+                <a class="nav-link" href="./services.html">Services</a>
+                <a class="nav-link" href="./testimonials.html" aria-current="page">Testimonials</a>
+                <a class="btn btn--sm nav-cta" href="./contact.html">Contact</a>
             </div>
         </nav>
     </header>
-    <section class="testimonials-header">
-        <h1>≽^• ˕ • ྀི≼ Happy Customers</h1>
-        <p>Hear from our beloved pet parents</p>
-    </section>
+    <div class="nav-scrim" aria-hidden="true"></div>
 
-    <main class="testimonials-container">
-        <div class="testimonial-card">
-            <img src="https://st2.depositphotos.com/1006611/5231/i/950/depositphotos_52317867-stock-photo-beautiful-latina-girl.jpg" alt="Customer 1 with pet" class="testimonial-photo">
-            <h3>Emma Rodriguez</h3>
-            <p>"PetShop has been a blessing for life for bringing Luna into my life. The staff is so caring, and the grooming service is top-notch!"</p>
-        </div>
+    <main id="main">
+        <section class="page-hero testimonials-header">
+            <div class="container">
+                <span class="eyebrow">Customer voices</span>
+                <h1 class="page-title"><span class="kaomoji" aria-hidden="true">≽^• ˕ • ྀི≼</span>Happy Pet Parents</h1>
+                <p class="lead">Hear from our beloved pet parents</p>
+            </div>
+        </section>
 
-        <div class="testimonial-card">
-            <img src="https://media.istockphoto.com/id/944300692/photo/cheerful-young-athlete-outdoors-by-the-river.jpg?s=612x612&w=0&k=20&c=9Cxf4INOF558cWhE1LAOmXM1RMaUBw8zp8YVIcSkN8M=" alt="Customer 2 with pet" class="testimonial-photo">
-            <h3>Ravi Menon</h3>
-            <p>"They did a spick and span job for my aquarium and my fish looks ever vibrant now."</p>
-        </div>
-                <div class="testimonial-card">
-            <img src="https://thumbs.dreamstime.com/b/outdoor-nice-portrait-adult-caucasian-man-black-beard-same-color-old-funny-dog-pug-garden-background-best-friend-177848587.jpg" alt="Customer 2 with pet" class="testimonial-photo">
-            <h3>Gustave Francis</h3>
-            <p>"I love how much attention they give to every pet. My lab Bruno always comes home happy and healthy after his visits."</p>
-        </div>
+        <section class="section">
+            <div class="container">
+                <div class="testimonials-container">
+
+                    <article class="testimonial-card tactile tactile--lift" data-reveal>
+                        <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                        </div>
+                        <blockquote>
+                            <p>PetShop has been a blessing for life for bringing Luna into my life. <mark>The staff is so caring, and the grooming service is top-notch!</mark></p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="https://st2.depositphotos.com/1006611/5231/i/950/depositphotos_52317867-stock-photo-beautiful-latina-girl.jpg" alt="Emma Rodriguez" class="testimonial-photo" width="68" height="68" loading="lazy" decoding="async">
+                            <div>
+                                <h3>Emma Rodriguez</h3>
+                                <span class="chip chip--blue">✓ Verified pet parent</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card tactile tactile--lift" data-reveal style="--reveal-delay: 90ms;">
+                        <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                        </div>
+                        <blockquote>
+                            <p>They did a <mark>spick and span job for my aquarium</mark> and my fish looks ever vibrant now.</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="https://media.istockphoto.com/id/944300692/photo/cheerful-young-athlete-outdoors-by-the-river.jpg?s=612x612&w=0&k=20&c=9Cxf4INOF558cWhE1LAOmXM1RMaUBw8zp8YVIcSkN8M=" alt="Ravi Menon" class="testimonial-photo" width="68" height="68" loading="lazy" decoding="async">
+                            <div>
+                                <h3>Ravi Menon</h3>
+                                <span class="chip chip--blue">✓ Verified pet parent</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card tactile tactile--lift" data-reveal style="--reveal-delay: 180ms;">
+                        <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star" /></svg>
+                        </div>
+                        <blockquote>
+                            <p>I love how much attention they give to every pet. <mark>My lab Bruno always comes home happy and healthy</mark> after his visits.</p>
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="https://thumbs.dreamstime.com/b/outdoor-nice-portrait-adult-caucasian-man-black-beard-same-color-old-funny-dog-pug-garden-background-best-friend-177848587.jpg" alt="Gustave Francis with his dog" class="testimonial-photo" width="68" height="68" loading="lazy" decoding="async">
+                            <div>
+                                <h3>Gustave Francis</h3>
+                                <span class="chip chip--blue">✓ Verified pet parent</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="cta-band tactile" data-reveal>
+                    <div>
+                        <h2>Write the next happy story.</h2>
+                        <p>Find your companion or book their next pamper day.</p>
+                    </div>
+                    <div class="btn-row">
+                        <a class="btn" href="./pets.html">Meet the pets <span class="arrow" aria-hidden="true">→</span></a>
+                        <a class="btn btn--white" href="./contact.html">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a class="footer-brand" href="./index.html">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="" width="40" height="40" loading="lazy">
+                        <span>Pet Pals</span>
+                    </a>
+                    <p>Where love meets care for every pet. A trusted place for pet lovers since 2010.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="./pets.html">Pets</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="./testimonials.html">Testimonials</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Visit us</h3>
+                    <address>
+                        123 Pet Street, Pawsville, India<br>
+                        <a href="tel:+919876543210">+91 98765 43210</a><br>
+                        <a href="mailto:contact@petshop.com">contact@petshop.com</a>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© Pet Pals. Made with love for every paw.</span>
+                <span>Display font made from <a href="http://www.onlinewebfonts.com/fonts" target="_blank" rel="noopener">Web Fonts</a>, licensed by CC BY 4.0</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js" defer></script>
 </body>
+
 </html>

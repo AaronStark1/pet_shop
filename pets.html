@@ -5,195 +5,519 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pets | Pet Pals</title>
-    <link rel="stylesheet" href="./index.css">
-    <!-- Favicon  -->
+    <meta name="description" content="Meet the Pet Pals family: ethically bred dogs, cats, bunnies and aquatic companions.">
+    <!-- Favicon -->
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3460/3460335.png">
-    <!-- Google Fonts  -->
+    <!-- Display Font: Bamboly Demo (Self-hosted for instant 0ms latency) -->
+    <link rel="preload" href="./fonts/bamboly-demo.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Primary Body & Subheadings: Inter, Poppins, Fredoka -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./index.css">
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-brand">
-                <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="">
-                <a href="./index.html"><h1>Pet Pals</h1></a>
-            </div>
-            <div class="navbar-links">
-                <button><a href="./pets.html">Pets</a></button>
-                <button><a href="./about.html">About</a></button>
-                <button><a href="./services.html">Services</a></button>
-                <button><a href="./testimonials.html">Testimonials</a></button>
-                <button><a href="./contact.html">Contact</a></button>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary">
+            <a class="navbar-brand" href="./index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="" width="38" height="38">
+                <span>Pet Pals</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+                <span class="nav-toggle-bars" aria-hidden="true"></span>
+            </button>
+            <div class="navbar-links" id="nav-drawer">
+                <a class="nav-link" href="./pets.html" aria-current="page">Pets</a>
+                <a class="nav-link" href="./about.html">About</a>
+                <a class="nav-link" href="./services.html">Services</a>
+                <a class="nav-link" href="./testimonials.html">Testimonials</a>
+                <a class="btn btn--sm nav-cta" href="./contact.html">Contact</a>
             </div>
         </nav>
     </header>
+    <div class="nav-scrim" aria-hidden="true"></div>
 
-    <main>
-        <section class="pets-section">
-            <h1 class="pets-title">🐾 Our Pets</h1>
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">Catalog &amp; adoption showcase</span>
+                <h1 class="page-title pets-title">Our Pets</h1>
+                <p class="lead">Sixteen companions across four families, each one ethically bred and ready for a forever home.</p>
+            </div>
+        </section>
 
-            <!-- Dogs Category -->
-            <div class="pets-category">
-                <h2>Dogs</h2>
-                <div class="pets-grid">
-                    <div class="pet-card">
-                        <img src="https://media.istockphoto.com/id/1971124912/photo/golden.jpg?s=612x612&w=0&k=20&c=6ZWyLdp3wsMv8B0DBST4ruULoErlxhQJ5QCVj0jrdQ8="
-                            alt="Golden Retriever">
-                        <h3>Golden Retriever</h3>
-                        <div class="pet-price">₹25000</div>
-                        <div class="pet-desc">Friendly, loyal, and playful. Perfect for families and kids.</div>
-                        <a class="details-link" href="https://www.thesprucepets.com/dog-breed-profile-golden-retriever-1117969">View Details</a>
+        <section class="section pets-section">
+            <div class="container">
+
+                <!-- Pets Toolbar: Category filter pills + Search & Sort -->
+                <div class="pets-toolbar">
+                    <div class="filter-bar" role="group" aria-label="Filter pets by category">
+                        <button class="filter-pill" type="button" data-filter="all" data-label="Pets" aria-pressed="true">🐾 All <span class="filter-count">16</span></button>
+                        <button class="filter-pill" type="button" data-filter="dogs" data-label="Dogs" aria-pressed="false">🐶 Dogs <span class="filter-count">4</span></button>
+                        <button class="filter-pill" type="button" data-filter="cats" data-label="Cats" aria-pressed="false">🐱 Cats <span class="filter-count">4</span></button>
+                        <button class="filter-pill" type="button" data-filter="bunnies" data-label="Bunnies" aria-pressed="false">🐰 Bunnies <span class="filter-count">4</span></button>
+                        <button class="filter-pill" type="button" data-filter="aquatic" data-label="Aquatic pets" aria-pressed="false">🐠 Aquatic <span class="filter-count">4</span></button>
                     </div>
-                    <div class="pet-card">
-                        <img src="https://premiumpetpalace.com/listing_images/beagle-01.jpg" alt="Beagle">
-                        <h3>Beagle</h3>
-                        <div class="pet-price">₹15,000</div>
-                        <div class="pet-desc">Energetic and curious. Loves walks and cuddles.</div>
-                        <a class="details-link" href="https://www.thesprucepets.com/dog-breed-profile-beagle-1117938">View Details</a>
-                    </div>
-                    <div class="pet-card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4V-vTxzZSnCfFOsGKeZubGawe9YZ5hk1s3Q&s"
-                            alt="Beagle">
-                        <h3>Labrador</h3>
-                        <div class="pet-price">₹20,500</div>
-                        <div class="pet-desc">Outgoing, and high-spirited companions with expressive eyes.</div>
-                        <a class="details-link" href="https://www.thesprucepets.com/breed-profile-labrador-retriever-1117977">View Details</a>
-                    </div>
-                    <div class="pet-card">
-                        <img src="https://www.mrnmrspet.com/Files/72022/77619202207280954156839.jpeg" alt="Beagle">
-                        <h3>Cane Corso</h3>
-                        <div class="pet-price">₹45,000</div>
-                        <div class="pet-desc">Powerful and protective. Fiercely loyal to their family.</div>
-                        <a class="details-link" href="https://www.thesprucepets.com/cane-corso-dog-breed-1117915">View Details</a>
+
+                    <div class="pets-controls">
+                        <div class="search-box">
+                            <span class="search-icon" aria-hidden="true">🔍</span>
+                            <input type="search" id="pet-search" class="search-input" placeholder="Search breed, name, trait..." aria-label="Search pets by name or description">
+                        </div>
+                        <div class="sort-box">
+                            <label for="pet-sort" class="visually-hidden">Sort pets</label>
+                            <select id="pet-sort" class="sort-select" aria-label="Sort pets">
+                                <option value="featured">Featured Order</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="name-asc">Name: A to Z</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <p class="visually-hidden" id="filter-status" role="status" aria-live="polite"></p>
 
-            <!-- Cats Category -->
-            <div class="pets-category">
-                <h2>Cats</h2>
-                <div class="pets-grid">
-                    <div class="pet-card">
-                        <img src="https://premiumpethouse.com/public/img/persian-cat/persian-cat-india-premiumpethouse5.jpg"
-                            alt="Persian Cat">
-                        <h3>Persian</h3>
-                        <div class="pet-price">₹10,000</div>
-                        <div class="pet-desc">Calm, affectionate, and beautiful long fur.</div>
-                        <a class="details-link" href="https://www.thesprucepets.com/persian-cat-breed-5220970">View Details</a>
+                <!-- No Results State -->
+                <div class="no-pets-found" id="no-pets-found" hidden>
+                    <span class="no-pets-icon" aria-hidden="true">🐶🔍</span>
+                    <h3 class="no-pets-title">No companions found</h3>
+                    <p class="no-pets-desc">We couldn't find any pets matching your criteria. Try adjusting your search term or category filter.</p>
+                    <button class="btn btn--coral btn--sm" id="reset-filters-btn" type="button">Reset All Filters</button>
+                </div>
+
+                <!-- Dogs Category -->
+                <div class="pets-category" data-category="dogs">
+                    <div class="category-head">
+                        <h2>Dogs</h2>
                     </div>
-                    <div class="pet-card">
-                        <img src="https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/fca42f04-2474-4302-a238-990c8aebfe8c/Siamese_cat_1110x740.jpg"
-                            alt="Siamese Cat">
-                        <h3>Siamese</h3>
-                        <div class="pet-price">₹30000</div>
-                        <div class="pet-desc">Vocal, intelligent, and loves attention.</div>
-                        <a class="details-link" href="https://www.thesprucepets.com/siamese-cat-breed-profile-551912">View Details</a>
+                    <div class="pets-grid">
+                        <article class="pet-card tactile tactile--lift" data-price="25000" data-name="Golden Retriever">
+                            <div class="pet-media">
+                                <img src="https://media.istockphoto.com/id/1971124912/photo/golden.jpg?s=612x612&w=0&k=20&c=6ZWyLdp3wsMv8B0DBST4ruULoErlxhQJ5QCVj0jrdQ8="
+                                    alt="Golden Retriever" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Golden Retriever</h3>
+                                <div class="pet-desc">Friendly, loyal, and playful. Perfect for families and kids.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹25,000</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Golden+Retriever&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://www.thesprucepets.com/dog-breed-profile-golden-retriever-1117969" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Golden Retriever (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="pet-card tactile tactile--lift" data-price="15000" data-name="Beagle">
+                            <div class="pet-media">
+                                <img src="https://images.unsplash.com/photo-1505628346881-b72b27e84530?auto=format&fit=crop&w=600&h=600&q=80" alt="Beagle" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Beagle</h3>
+                                <div class="pet-desc">Energetic and curious. Loves walks and cuddles.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹15,000</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Beagle&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://www.thesprucepets.com/dog-breed-profile-beagle-1117938" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Beagle (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="pet-card tactile tactile--lift" data-price="20500" data-name="Labrador">
+                            <div class="pet-media">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4V-vTxzZSnCfFOsGKeZubGawe9YZ5hk1s3Q&s"
+                                    alt="Labrador" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Labrador</h3>
+                                <div class="pet-desc">Outgoing, and high-spirited companions with expressive eyes.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹20,500</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Labrador&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://www.thesprucepets.com/breed-profile-labrador-retriever-1117977" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Labrador (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="pet-card tactile tactile--lift" data-price="45000" data-name="Cane Corso">
+                            <div class="pet-media">
+                                <img src="https://www.mrnmrspet.com/Files/72022/77619202207280954156839.jpeg" alt="Cane Corso" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Cane Corso</h3>
+                                <div class="pet-desc">Powerful and protective. Fiercely loyal to their family.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹45,000</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Cane+Corso&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://www.thesprucepets.com/cane-corso-dog-breed-1117915" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Cane Corso (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                    <div class="pet-card">
-                        <img src="https://lolcats.com/wp-content/uploads/2021/07/Cream-Color.jpg" alt="Siamese Cat">
-                        <h3>British Shorthair</h3>
-                        <div class="pet-price">₹50000</div>
-                        <div class="pet-desc">Adorable, rounded, teddy-bear-like features.</div>
-                        <a class="details-link" href="https://www.thesprucepets.com/british-shorthair-5219450">View Details</a>
+                </div>
+
+                <!-- Cats Category -->
+                <div class="pets-category" data-category="cats">
+                    <div class="category-head">
+                        <h2>Cats</h2>
                     </div>
-                    <div class="pet-card">
-                        <img src="https://i.pinimg.com/736x/95/6d/c0/956dc09e9724cdbffd07e41be68fd174.jpg"
-                            alt="Siamese Cat">
-                        <h3>Bengal</h3>
-                        <div class="pet-price">₹35000</div>
-                        <div class="pet-desc">Sleek and active with a striking thick luxurious coat.</div>
-                        <a class="details-link" href="https://www.thesprucepets.com/bengal-cats-1238154">View Details</a>
+                    <div class="pets-grid">
+                        <article class="pet-card tactile tactile--lift" data-price="10000" data-name="Persian">
+                            <div class="pet-media">
+                                <img src="https://premiumpethouse.com/public/img/persian-cat/persian-cat-india-premiumpethouse5.jpg"
+                                    alt="Persian Cat" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Persian</h3>
+                                <div class="pet-desc">Calm, affectionate, and beautiful long fur.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹10,000</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Persian&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://www.thesprucepets.com/persian-cat-breed-5220970" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Persian (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="pet-card tactile tactile--lift" data-price="30000" data-name="Siamese">
+                            <div class="pet-media">
+                                <img src="https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/fca42f04-2474-4302-a238-990c8aebfe8c/Siamese_cat_1110x740.jpg"
+                                    alt="Siamese Cat" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Siamese</h3>
+                                <div class="pet-desc">Vocal, intelligent, and loves attention.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹30,000</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Siamese&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://www.thesprucepets.com/siamese-cat-breed-profile-551912" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Siamese (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="pet-card tactile tactile--lift" data-price="50000" data-name="British Shorthair">
+                            <div class="pet-media">
+                                <img src="https://lolcats.com/wp-content/uploads/2021/07/Cream-Color.jpg" alt="British Shorthair Cat" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>British Shorthair</h3>
+                                <div class="pet-desc">Adorable, rounded, teddy-bear-like features.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹50,000</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=British+Shorthair&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://www.thesprucepets.com/british-shorthair-5219450" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the British Shorthair (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="pet-card tactile tactile--lift" data-price="35000" data-name="Bengal">
+                            <div class="pet-media">
+                                <img src="https://i.pinimg.com/736x/95/6d/c0/956dc09e9724cdbffd07e41be68fd174.jpg"
+                                    alt="Bengal Cat" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Bengal</h3>
+                                <div class="pet-desc">Sleek and active with a striking thick luxurious coat.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹35,000</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Bengal&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://www.thesprucepets.com/bengal-cats-1238154" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Bengal (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Bunny Category -->
+                <div class="pets-category" data-category="bunnies">
+                    <div class="category-head">
+                        <h2>Bunnies</h2>
+                    </div>
+                    <div class="pets-grid">
+                        <article class="pet-card tactile tactile--lift" data-price="40000" data-name="Creme d'Argent">
+                            <div class="pet-media">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ5N2yrv2rxqD_yC3HI-b0aiWRAxsh243nQQ&s"
+                                    alt="Creme d'Argent rabbit" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Creme d'Argent</h3>
+                                <div class="pet-desc">French relaxed breed having creamy white with orange undercoat and a butterfly marking on the nose.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹40,000</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Creme+d%27Argent&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://livestockconservancy.org/creme-d-argent-rabbit/" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Creme d'Argent (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="pet-card tactile tactile--lift" data-price="5000" data-name="Blanc de Hotot">
+                            <div class="pet-media">
+                                <img src="https://www.thesprucepets.com/thmb/S5Q-2CElqzUGbPGFtGcko730y-k=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/white-hotot-rabbit-eating-grass-509265984-5c0da06546e0fb0001366ac0.jpg"
+                                    alt="Blanc de Hotot rabbit" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Blanc de Hotot</h3>
+                                <div class="pet-desc">Active, caring breed with frosty white fur with striking black eye bands.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹5,000</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Blanc+de+Hotot&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://livestockconservancy.org/blanc-de-hotot-rabbit/" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Blanc de Hotot (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="pet-card tactile tactile--lift" data-price="10000" data-name="Alaskan">
+                            <div class="pet-media">
+                                <img src="https://cdn0.animalwised.com/en/razas/6/2/6/alaska-rabbit_626_1_600.jpg"
+                                    alt="Alaskan rabbit" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Alaskan</h3>
+                                <div class="pet-desc">German breed having jet-black coat with a docile and calm personality.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹10,000</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Alaskan&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://everbreed.com/blog/alaska-rabbit-care-temperament-and-breeding-guide/" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Alaskan (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="pet-card tactile tactile--lift" data-price="15000" data-name="Holland Lop">
+                            <div class="pet-media">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1kDhplXZML0FpsC9FcGWOA79Y2INKJBDUS3Mqx8G70FPqRr8-MfduQgiz5_qqJXdu4AQ&usqp=CAU"
+                                    alt="Holland Lop rabbit" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Holland Lop</h3>
+                                <div class="pet-desc">Energetic and playful with a large head, round nose and floppy ears.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹15,000</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Holland+Lop&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://www.petmd.com/rabbit/breeds/holland-lop" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Holland Lop (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Fish Category -->
+                <div class="pets-category" data-category="aquatic">
+                    <div class="category-head">
+                        <h2>Aquatic</h2>
+                    </div>
+                    <div class="pets-grid">
+                        <article class="pet-card tactile tactile--lift" data-price="200" data-name="Oscar">
+                            <div class="pet-media">
+                                <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?auto=format&fit=crop&w=600&h=600&q=80"
+                                    alt="Oscar fish" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Oscar</h3>
+                                <div class="pet-desc">Individualistic and dramatic orange fish that eat a lot.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹200</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Oscar&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/oscar/" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Oscar (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="pet-card tactile tactile--lift" data-price="180" data-name="Angelfish">
+                            <div class="pet-media">
+                                <img src="https://5.imimg.com/data5/SY/IF/RJ/SELLER-4075233/angel-fish.jpg" alt="Angelfish" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Angelfish</h3>
+                                <div class="pet-desc">Distinct diamond-shaped fish with a graceful swimming behaviour.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹180</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Angelfish&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://www.aqueon.com/resources/care-guides/angelfish" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Angelfish (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="pet-card tactile tactile--lift" data-price="100" data-name="Black Moor">
+                            <div class="pet-media">
+                                <img src="https://5.imimg.com/data5/ANDROID/Default/2023/6/314018012/MR/OU/JA/108945342/product-jpeg-500x500.jpg"
+                                    alt="Black Moor goldfish" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Black Moor</h3>
+                                <div class="pet-desc">Peaceful and big-eyed slow swimmers who can be shy.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹100</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Black+Moor&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://www.about-goldfish.com/black-moor-goldfish.html" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Black Moor (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="pet-card tactile tactile--lift" data-price="1000" data-name="Siamese Fighting fish">
+                            <div class="pet-media">
+                                <img src="https://static.wixstatic.com/media/42541b_93fec84d228e485f9793c2fdff4cb875~mv2.jpg/v1/fill/w_748,h_526,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/42541b_93fec84d228e485f9793c2fdff4cb875~mv2.jpg"
+                                    alt="Siamese Fighting fish (Betta)" loading="lazy" decoding="async">
+                                <div class="pet-badges">
+                                    <span class="chip chip--gold">✓ Ethically bred</span>
+                                    <span class="chip chip--status">Available</span>
+                                </div>
+                            </div>
+                            <div class="pet-body">
+                                <h3>Siamese Fighting fish</h3>
+                                <div class="pet-desc">Territorial and aggressive yet vibrant and colorful.</div>
+                                <div class="pet-foot">
+                                    <div class="pet-price price-pill">₹1,000</div>
+                                    <div class="pet-ctas">
+                                        <a class="btn btn--sm btn--coral pet-inquire-btn" href="./contact.html?pet=Siamese+Fighting+fish&service=adoption">Adopt 🐾</a>
+                                        <a class="details-link" href="https://www.thesprucepets.com/siamese-fighting-fish-bettas-1378308" target="_blank" rel="noopener">Info <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> about the Siamese Fighting fish (opens in a new tab)</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
 
             </div>
-            </div>
+        </section>
 
-            <!-- Fish Category -->
-            <div class="pets-category">
-                <h2>Fish</h2>
-                <div class="pets-grid">
-                    <div class="pet-card">
-                        <img src="https://talis-us.com/cdn/shop/collections/Untitled-design-26_33abc683-4b77-4012-98c0-43656e07d88c.webp?v=1744301745"
-                            alt="Goldfish">
-                        <h3>Oscar</h3>
-                        <div class="pet-price">₹200</div>
-                        <div class="pet-desc">Individualistic and dramatic orange fish that eat a lot.</div>
-                        <a class="details-link" href="https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/oscar/">View Details</a>
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="cta-band tactile" data-reveal>
+                    <div>
+                        <h2>Found a face you can’t forget?</h2>
+                        <p>Tell us who caught your eye and we’ll set up a visit.</p>
                     </div>
-                    <div class="pet-card">
-                        <img src="https://5.imimg.com/data5/SY/IF/RJ/SELLER-4075233/angel-fish.jpg" alt="Goldfish">
-                        <h3>Angelfish</h3>
-                        <div class="pet-price">₹180</div>
-                        <div class="pet-desc">Distinct diamond-shaped fish with a graceful swimming behaviour,</div>
-                        <a class="details-link" href="https://www.aqueon.com/resources/care-guides/angelfish">View Details</a>
-                    </div>
-                    <div class="pet-card">
-                        <img src="https://5.imimg.com/data5/ANDROID/Default/2023/6/314018012/MR/OU/JA/108945342/product-jpeg-500x500.jpg"
-                            alt="Betta Fish">
-                        <h3>Black Moor</h3>
-                        <div class="pet-price">₹100</div>
-                        <div class="pet-desc">Peaceful and big-eyed slow swimmers who can be shy.</div>
-                        <a class="details-link" href="https://www.about-goldfish.com/black-moor-goldfish.html">View Details</a>
-                    </div>
-                    <div class="pet-card">
-                        <img src="https://static.wixstatic.com/media/42541b_93fec84d228e485f9793c2fdff4cb875~mv2.jpg/v1/fill/w_748,h_526,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/42541b_93fec84d228e485f9793c2fdff4cb875~mv2.jpg"
-                            alt="Betta Fish">
-                        <h3>Siamese Fighting fish</h3>
-                        <div class="pet-price">₹1000</div>
-                        <div class="pet-desc">Territorial and aggressive yet vibrant and colorful</div>
-                        <a class="details-link" href="https://www.thesprucepets.com/siamese-fighting-fish-bettas-1378308">View Details</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bunny Category -->
-            <div class="pets-category">
-                <h2>Bunnies</h2>
-                <div class="pets-grid">
-                    <div class="pet-card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ5N2yrv2rxqD_yC3HI-b0aiWRAxsh243nQQ&s"
-                            alt="White Bunny">
-                        <h3>Creme d'Argent</h3>
-                        <div class="pet-price">₹40000</div>
-                        <div class="pet-desc">French relaxed breed having creamy white with orange undercoat and a
-                            butterfly marking on the nose.</div>
-                        <a class="details-link" href="https://livestockconservancy.org/creme-d-argent-rabbit/">View Details</a>
-                    </div>
-                    <div class="pet-card">
-                        <img src="https://www.thesprucepets.com/thmb/S5Q-2CElqzUGbPGFtGcko730y-k=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/white-hotot-rabbit-eating-grass-509265984-5c0da06546e0fb0001366ac0.jpg"
-                            alt="White Bunny">
-                        <h3>Blanc de Hotot</h3>
-                        <div class="pet-price">₹5000</div>
-                        <div class="pet-desc">Active,caring breed with frosty white fur with striking black eye bands.
-                        </div>
-                        <a class="details-link" href="https://livestockconservancy.org/blanc-de-hotot-rabbit/">View Details</a>
-                    </div>
-                    <div class="pet-card">
-                        <img src="https://cdn0.animalwised.com/en/razas/6/2/6/alaska-rabbit_626_1_600.jpg"
-                            alt="White Bunny">
-                        <h3>Alaskan</h3>
-                        <div class="pet-price">₹10000</div>
-                        <div class="pet-desc">German breed having jet-black coat with a docile and calm personality.
-                        </div>
-                        <a class="details-link" href="https://everbreed.com/blog/alaska-rabbit-care-temperament-and-breeding-guide/">View Details</a>
-                    </div>
-                    <div class="pet-card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1kDhplXZML0FpsC9FcGWOA79Y2INKJBDUS3Mqx8G70FPqRr8-MfduQgiz5_qqJXdu4AQ&usqp=CAU"
-                            alt="White Bunny">
-                        <h3>Holland Lop</h3>
-                        <div class="pet-price">₹15000</div>
-                        <div class="pet-desc">Energetic and playful with a large head,round nose and floppy ears.
-                        </div>
-                        <a class="details-link" href="https://www.petmd.com/rabbit/breeds/holland-lop">View Details</a>
+                    <div class="btn-row">
+                        <a class="btn" href="./contact.html">Arrange a visit <span class="arrow" aria-hidden="true">→</span></a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a class="footer-brand" href="./index.html">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="" width="40" height="40" loading="lazy">
+                        <span>Pet Pals</span>
+                    </a>
+                    <p>Where love meets care for every pet. A trusted place for pet lovers since 2010.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="./pets.html">Pets</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="./testimonials.html">Testimonials</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Visit us</h3>
+                    <address>
+                        123 Pet Street, Pawsville, India<br>
+                        <a href="tel:+919876543210">+91 98765 43210</a><br>
+                        <a href="mailto:contact@petshop.com">contact@petshop.com</a>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© Pet Pals. Made with love for every paw.</span>
+                <span>Display font made from <a href="http://www.onlinewebfonts.com/fonts" target="_blank" rel="noopener">Web Fonts</a>, licensed by CC BY 4.0</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js" defer></script>
 </body>
 
 </html>

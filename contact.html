@@ -5,109 +5,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Pet Pals</title>
-    <link rel="stylesheet" href="./index.css">
-        <!-- Favicon  -->
+    <meta name="description" content="Contact Pet Pals: send a message, call us, or find the shop on the map.">
+    <!-- Favicon -->
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3460/3460335.png">
-    <!-- Google Fonts  -->
+    <!-- Display Font: Bamboly Demo (Self-hosted for instant 0ms latency) -->
+    <link rel="preload" href="./fonts/bamboly-demo.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Primary Body & Subheadings: Inter, Poppins, Fredoka -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./index.css">
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-brand">
-                <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="">
-                <a href="./index.html"><h1>Pet Pals</h1></a>
-            </div>
-            <div class="navbar-links">
-                <button><a href="./pets.html">Pets</a></button>
-                <button><a href="./about.html">About</a></button>
-                <button><a href="./services.html">Services</a></button>
-                <button><a href="./testimonials.html">Testimonials</a></button>
-                <button><a href="./contact.html">Contact</a></button>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary">
+            <a class="navbar-brand" href="./index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="" width="38" height="38">
+                <span>Pet Pals</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+                <span class="nav-toggle-bars" aria-hidden="true"></span>
+            </button>
+            <div class="navbar-links" id="nav-drawer">
+                <a class="nav-link" href="./pets.html">Pets</a>
+                <a class="nav-link" href="./about.html">About</a>
+                <a class="nav-link" href="./services.html">Services</a>
+                <a class="nav-link" href="./testimonials.html">Testimonials</a>
+                <a class="btn btn--sm nav-cta" href="./contact.html" aria-current="page">Contact</a>
             </div>
         </nav>
     </header>
-    <section class="contact-banner">
-        <h1> ☎ Contact Us</h1>
-        <p>We’re here to help you and your furry friends</p>
-    </section>
+    <div class="nav-scrim" aria-hidden="true"></div>
 
-    <main class="contact-page">
-        <section class="contact-form-section">
-            <div class="card">
-                <h2>Send Us a Message</h2>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="pet-type">Pet Type</label>
-                            <input type="text" id="pet-type" name="pet-type" placeholder="Dog, Cat, Bird, etc.">
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="inquiry-type">Inquiry Type</label>
-                            <select id="inquiry-type" name="inquiry-type" required>
-                                <option value="">Select...</option>
-                                <option value="adoption">Pet Shopping</option>
-                                <option value="grooming">Grooming</option>
-                                <option value="training">Training</option>
-                                <option value="general">General Inquiry</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <input type="submit" value="Send Message">
-                    </div>
-                </div>
+    <main id="main">
+        <section class="page-hero contact-banner">
+            <div class="container">
+                <span class="eyebrow">Interactive contact hub</span>
+                <h1 class="page-title"><span class="kaomoji" aria-hidden="true">☎</span>Contact Us</h1>
+                <p class="lead">We’re here to help you and your furry friends</p>
             </div>
         </section>
 
+        <section class="section">
+            <div class="container contact-page">
 
-        <section class="contact-info">
-            <h2>Visit Us</h2>
-            <p><strong>Address:</strong> 123 Pet Street, Pawsville, India</p>
-            <p><strong>Phone:</strong> +91 98765 43210</p>
-            <p><strong>Email:</strong> contact@petshop.com</p>
+                <!-- Left column: hours, hotline, location, map -->
+                <section class="contact-info" aria-labelledby="visit-title">
+                    <div class="info-card tactile" data-reveal>
+                        <h2 id="visit-title">Visit Us</h2>
+                        <div class="info-list">
+                            <p><strong>Address:</strong> 123 Pet Street, Pawsville, India</p>
+                            <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:contact@petshop.com">contact@petshop.com</a></p>
+                        </div>
+                    </div>
 
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15723.659862535078!2d76.2505898871582!3d9.857501299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b086f000707f783%3A0xa0fb91cd039b5c16!2sAnimal%20Rescue%20Kochi%20(ARK)!5e0!3m2!1sen!2sin!4v1755189439625!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="info-card info-card--hours tactile" data-reveal>
+                        <h3>Store Hours</h3>
+                        <ul class="hours-list">
+                            <li><span>Monday – Friday</span><span>9:00 am – 8:00 pm</span></li>
+                            <li><span>Saturday</span><span>9:00 am – 6:00 pm</span></li>
+                            <li><span>Sunday</span><span>10:00 am – 4:00 pm</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card info-card--hotline tactile" data-reveal>
+                        <span class="chip">Emergency hotline</span>
+                        <h3>Pet in trouble? Call us straight away.</h3>
+                        <a class="hotline-number" href="tel:+919876543210">+91 98765 43210</a>
+                    </div>
+
+                    <div class="map-container tactile" data-reveal>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15723.659862535078!2d76.2505898871582!3d9.857501299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b086f000707f783%3A0xa0fb91cd039b5c16!2sAnimal%20Rescue%20Kochi%20(ARK)!5e0!3m2!1sen!2sin!4v1755189439625!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" title="Map showing our location" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="map-caption">
+                            <span>📍 Drag, zoom and explore</span>
+                            <span>123 Pet Street, Pawsville</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Right column: tactile form card -->
+                <section class="contact-form-section" aria-labelledby="form-title">
+                    <form class="card form-card" id="contact-form" data-recipient="contact@petshop.com" novalidate>
+                        <h2 id="form-title">Send Us a Message</h2>
+                        <p>Fields marked <span aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="req" aria-hidden="true">*</span></label>
+                                <input type="text" id="name" name="name" autocomplete="name" required>
+                                <span class="field-error" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+                                <input type="email" id="email" name="email" autocomplete="email" required>
+                                <span class="field-error" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" autocomplete="tel">
+                                <span class="field-error" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pet-type">Pet Type</label>
+                                <input type="text" id="pet-type" name="pet-type" placeholder="Dog, Cat, Bird, etc.">
+                                <span class="field-error" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group form-group--full">
+                                <label for="inquiry-type">Inquiry Type <span class="req" aria-hidden="true">*</span></label>
+                                <select id="inquiry-type" name="inquiry-type" required>
+                                    <option value="">Select...</option>
+                                    <option value="adoption">Pet Shopping / Adoption</option>
+                                    <option value="grooming">Grooming &amp; Spa</option>
+                                    <option value="vet">Veterinary Care &amp; Health</option>
+                                    <option value="training">Pet Training</option>
+                                    <option value="general">General Inquiry</option>
+                                </select>
+                                <span class="field-error" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group form-group--full">
+                                <label for="message">Your Message <span class="req" aria-hidden="true">*</span></label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <span class="field-error" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group--full">
+                                <input class="btn form-submit" type="submit" value="Send Message">
+                            </div>
+                        </div>
+
+                        <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+                    </form>
+                </section>
+
             </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a class="footer-brand" href="./index.html">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="" width="40" height="40" loading="lazy">
+                        <span>Pet Pals</span>
+                    </a>
+                    <p>Where love meets care for every pet. A trusted place for pet lovers since 2010.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="./pets.html">Pets</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="./testimonials.html">Testimonials</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Visit us</h3>
+                    <address>
+                        123 Pet Street, Pawsville, India<br>
+                        <a href="tel:+919876543210">+91 98765 43210</a><br>
+                        <a href="mailto:contact@petshop.com">contact@petshop.com</a>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© Pet Pals. Made with love for every paw.</span>
+                <span>Display font made from <a href="http://www.onlinewebfonts.com/fonts" target="_blank" rel="noopener">Web Fonts</a>, licensed by CC BY 4.0</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js" defer></script>
 </body>
 
 </html>

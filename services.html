@@ -1,85 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Pet Pals</title>
-        <link rel="stylesheet" href="./index.css">
-    <!-- AOS  -->
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Favicon  -->
+    <meta name="description" content="Pet Pals care and wellness: grooming, veterinary care, training and aquarium cleaning.">
+    <!-- Favicon -->
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3460/3460335.png">
-    <!-- Google Fonts  -->
+    <!-- Display Font: Bamboly Demo (Self-hosted for instant 0ms latency) -->
+    <link rel="preload" href="./fonts/bamboly-demo.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Primary Body & Subheadings: Inter, Poppins, Fredoka -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./index.css">
+    <script>document.documentElement.classList.add("js");</script>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-brand">
-                <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="">
-                <a href="./index.html"><h1>Pet Pals</h1></a>
-            </div>
-            <div class="navbar-links">
-                <button><a href="./pets.html">Pets</a></button>
-                <button><a href="./about.html">About</a></button>
-                <button><a href="./services.html">Services</a></button>
-                <button><a href="./testimonials.html">Testimonials</a></button>
-                <button><a href="./contact.html">Contact</a></button>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary">
+            <a class="navbar-brand" href="./index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="" width="38" height="38">
+                <span>Pet Pals</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+                <span class="nav-toggle-bars" aria-hidden="true"></span>
+            </button>
+            <div class="navbar-links" id="nav-drawer">
+                <a class="nav-link" href="./pets.html">Pets</a>
+                <a class="nav-link" href="./about.html">About</a>
+                <a class="nav-link" href="./services.html" aria-current="page">Services</a>
+                <a class="nav-link" href="./testimonials.html">Testimonials</a>
+                <a class="btn btn--sm nav-cta" href="./contact.html">Contact</a>
             </div>
         </nav>
     </header>
-    <main>
-  <section class="services-section">
-    <h2 class="services-title">ฅ՞•ﻌ•՞ฅ <br>Our Pet Services</h2>
-    <div class="services-list">
-      <!-- Service 1 -->
-      <div data-aos="fade-right" class="service-row">
-        <div class="service-img">
-          <img src="https://cdn.shopify.com/s/files/1/0259/9626/3490/files/dog-grooming-1.png?v=1665519040" alt="Pet Grooming">
+    <div class="nav-scrim" aria-hidden="true"></div>
+
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">Care &amp; wellness</span>
+                <h1 class="page-title services-title"><span class="kaomoji" aria-hidden="true">ฅ՞•ﻌ•՞ฅ</span>Our Pet Services</h1>
+                <p class="lead">Everything your companion needs to look, feel and behave their best, all under one roof.</p>
+            </div>
+        </section>
+
+        <section class="section services-section">
+            <div class="container">
+                <div class="services-list">
+
+                    <!-- Service 1 -->
+                    <article class="service-row tactile" data-reveal="left">
+                        <span class="service-number" aria-hidden="true">01</span>
+                        <div class="service-img">
+                            <img src="https://cdn.shopify.com/s/files/1/0259/9626/3490/files/dog-grooming-1.png?v=1665519040" alt="Pet Grooming" loading="lazy" decoding="async">
+                        </div>
+                        <div class="service-desc-block">
+                            <span class="chip chip--gold">Spa &amp; style</span>
+                            <h3>Pet Grooming</h3>
+                            <p>Professional grooming for all pets. Bathing, trimming, nail care, and more to keep your pet looking and feeling their best.</p>
+                            <ul class="feature-list" aria-label="Pet Grooming includes">
+                                <li>Bathing</li>
+                                <li>Trimming</li>
+                                <li>Nail Trimming</li>
+                            </ul>
+                            <a class="btn" href="./contact.html?service=grooming">Book grooming <span class="arrow" aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Service 2 -->
+                    <article class="service-row tactile reverse" data-reveal="right">
+                        <span class="service-number" aria-hidden="true">02</span>
+                        <div class="service-img">
+                            <img src="https://media.istockphoto.com/id/637947944/photo/a-male-veterinarian-is-performing-a-routine-checkup.jpg?s=612x612&w=0&k=20&c=7Qc13WhO6saIW-OSu3N1g7qUQFJ7GTDwIuS0sY7IzEY=" alt="Veterinary Care" loading="lazy" decoding="async">
+                        </div>
+                        <div class="service-desc-block">
+                            <span class="chip chip--sky">Health first</span>
+                            <h3>Veterinary Care</h3>
+                            <p>On-site vet consultations, vaccinations, and health checkups to ensure your pet’s medical well-being and happiness.</p>
+                            <ul class="feature-list" aria-label="Veterinary Care includes">
+                                <li>Vet Consultations</li>
+                                <li>Vaccinations</li>
+                                <li>Health Checkups</li>
+                            </ul>
+                            <a class="btn" href="./contact.html?service=vet">Ask about vet care <span class="arrow" aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Service 3 -->
+                    <article class="service-row tactile" data-reveal="left">
+                        <span class="service-number" aria-hidden="true">03</span>
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=800&h=600&q=80" alt="Pet Training" loading="lazy" decoding="async">
+                        </div>
+                        <div class="service-desc-block">
+                            <span class="chip chip--gold">Good manners</span>
+                            <h3>Pet Training</h3>
+                            <p>Obedience and behavior training for dogs, cats, and bunnies. Friendly trainers for a happy, well-mannered fur companion.</p>
+                            <ul class="feature-list" aria-label="Pet Training includes">
+                                <li>Obedience</li>
+                                <li>Behavior Training</li>
+                                <li>Dogs, Cats &amp; Bunnies</li>
+                            </ul>
+                            <a class="btn" href="./contact.html?service=training">Book training <span class="arrow" aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Service 4 -->
+                    <article class="service-row tactile reverse" data-reveal="right">
+                        <span class="service-number" aria-hidden="true">04</span>
+                        <div class="service-img">
+                            <img src="https://www.bunnycart.com/blog/wp-content/uploads/2018/05/Make-the-aquarium-clean-with-these-5-steps-1280x720.jpg" alt="Aquarium Cleaning" loading="lazy" decoding="async">
+                        </div>
+                        <div class="service-desc-block">
+                            <span class="chip chip--sky">Crystal clear</span>
+                            <h3>Aquarium Cleaning</h3>
+                            <p>Our team is fully trained and equipped to handle all types of aquarium cleaning projects, ensuring a clean and healthy environment for your aquatic friends.</p>
+                            <ul class="feature-list" aria-label="Aquarium Cleaning includes">
+                                <li>All Aquarium Types</li>
+                                <li>Trained Team</li>
+                                <li>Healthy Habitat</li>
+                            </ul>
+                            <a class="btn" href="./contact.html?service=general">Book a clean <span class="arrow" aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="cta-band tactile" data-reveal>
+                    <div>
+                        <h2>Not sure what your pet needs?</h2>
+                        <p>Tell us about them and our team will point you to the right care.</p>
+                    </div>
+                    <div class="btn-row">
+                        <a class="btn" href="./contact.html">Talk to us <span class="arrow" aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a class="footer-brand" href="./index.html">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3028/3028549.png" alt="" width="40" height="40" loading="lazy">
+                        <span>Pet Pals</span>
+                    </a>
+                    <p>Where love meets care for every pet. A trusted place for pet lovers since 2010.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="./pets.html">Pets</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="./testimonials.html">Testimonials</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Visit us</h3>
+                    <address>
+                        123 Pet Street, Pawsville, India<br>
+                        <a href="tel:+919876543210">+91 98765 43210</a><br>
+                        <a href="mailto:contact@petshop.com">contact@petshop.com</a>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© Pet Pals. Made with love for every paw.</span>
+                <span>Display font made from <a href="http://www.onlinewebfonts.com/fonts" target="_blank" rel="noopener">Web Fonts</a>, licensed by CC BY 4.0</span>
+            </div>
         </div>
-        <div class="service-desc-block">
-          <h3>Pet Grooming</h3>
-          <p>Professional grooming for all pets. Bathing, trimming, nail care, and more to keep your pet looking and feeling their best.</p>
-        </div>
-      </div>
-      <!-- Service 2 -->
-      <div data-aos="fade-left" class="service-row reverse">
-        <div class="service-desc-block">
-          <h3>Veterinary Care</h3>
-          <p>On-site vet consultations, vaccinations, and health checkups to ensure your pet’s medical well-being and happiness.</p>
-        </div>
-        <div class="service-img">
-          <img src="https://media.istockphoto.com/id/637947944/photo/a-male-veterinarian-is-performing-a-routine-checkup.jpg?s=612x612&w=0&k=20&c=7Qc13WhO6saIW-OSu3N1g7qUQFJ7GTDwIuS0sY7IzEY=" alt="Veterinary Care">
-        </div>
-      </div>
-      <!-- Service 3 -->
-      <div data-aos="fade-right" class="service-row">
-        <div class="service-img">
-          <img src="https://images.ctfassets.net/sfnkq8lmu5d7/7pQi8c04ZgwQLd3yVx4YVa/1700926d0cbf98624a1fdeb4cafb242c/2023-04-01_Clicker_training_cat_hero.jpg?w=1000&h=750&q=70&fm=webp" alt="Pet Training">
-        </div>
-        <div class="service-desc-block">
-          <h3>Pet Training</h3>
-          <p>Obedience and behavior training for dogs, cats, and bunnies. Friendly trainers for a happy, well-mannered fur companion.</p>
-        </div>
-      </div>
-      <!-- Service 4 -->
-      <div data-aos="fade-left" class="service-row reverse">
-        <div class="service-desc-block">
-          <h3>Aquarium Cleaning</h3>
-          <p>Our team is fully trained and equipped to handle all types of aquarium cleaning projects, ensuring a clean and healthy environment for your aquatic friends.</p>
-        </div>
-        <div class="service-img">
-          <img src="https://www.bunnycart.com/blog/wp-content/uploads/2018/05/Make-the-aquarium-clean-with-these-5-steps-1280x720.jpg" alt="Pet Boarding">
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+    </footer>
+
+    <script src="./main.js" defer></script>
 </body>
-<script>
-  AOS.init();
-</script>
+
 </html>
